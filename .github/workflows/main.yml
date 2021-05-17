@@ -1,6 +1,7 @@
 # This is a basic workflow to help you get started with Actions
 
-- name: React_App
+name: React_App
+
 
 # Controls when the action will run. 
 on:
@@ -9,10 +10,6 @@ on:
     branches: [ master ]
   pull_request:
     branches: [ master ]
-
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -29,7 +26,6 @@ jobs:
         uses : actions/setup-node@v2-beta
         with :
              node-version : 12
-             
       - name : install yarn
       - uses : borales/actions-yarn@v2.0.0
         with : 
